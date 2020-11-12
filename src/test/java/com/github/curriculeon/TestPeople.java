@@ -10,7 +10,12 @@ public class TestPeople {
 
     @Test
     public void testAdd(){
-        People personList = new People();
+        People personList = new People() {
+            @Override
+            public Person[] toArray() {
+                return new Person[0];
+            }
+        };
         Person person = new Person(null,null);
         personList.add(person);
         Assert.assertTrue(personList.contains(person));
@@ -18,7 +23,12 @@ public class TestPeople {
 
     @Test
     public void testRemove(){
-        People personList = new People();
+        People personList = new People() {
+            @Override
+            public Person[] toArray() {
+                return new Person[0];
+            }
+        };
         Person person = new Person(null,null);
         personList.add(person);
         Assert.assertTrue(personList.contains(person));
@@ -29,7 +39,12 @@ public class TestPeople {
     
     @Test
     public void testFindById(){
-        People personList = new People();
+        People personList = new People() {
+            @Override
+            public Person[] toArray() {
+                return new Person[0];
+            }
+        };
         Person person = new Person(0L,null);
         personList.add(person);
         Long id = person.getId();
