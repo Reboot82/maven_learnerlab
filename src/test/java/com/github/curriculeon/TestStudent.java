@@ -32,14 +32,17 @@ public class TestStudent {
     @Test
     public void testLearn(){
         //given
-        Student student = new Student(null,null);
+        Student student = new Student(1L,"Charles");
         Double studyTime = 10.0;
+        student.totalStudyTime = 2.0;
+        Double fullST = studyTime + student.getTotalStudyTime();
 
         //when
         student.learn(studyTime);
+        Double afterTime = student.getTotalStudyTime();
 
         //then
-        Assert.assertEquals();
+        Assert.assertEquals(fullST, afterTime);
     }
 
 }

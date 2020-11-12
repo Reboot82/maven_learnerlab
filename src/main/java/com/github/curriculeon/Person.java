@@ -1,6 +1,6 @@
 package com.github.curriculeon;
 
-public class Person {
+public class Person<Person> {
 
     private final Long id;
     private String name;
